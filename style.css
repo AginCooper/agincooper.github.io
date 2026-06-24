@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f0f12;
+    color:white;
+    font-family:"Segoe UI",sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.background-glow{
+    position:fixed;
+    top:-200px;
+    left:50%;
+    transform:translateX(-50%);
+    width:800px;
+    height:800px;
+    border-radius:50%;
+    background:radial-gradient(
+        circle,
+        rgba(255,0,0,0.35),
+        rgba(255,0,0,0)
+    );
+    pointer-events:none;
+    z-index:-1;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px 80px;
+}
+
+.logo-box h1{
+    font-size:72px;
+    letter-spacing:8px;
+    color:#ff3131;
+    text-shadow:
+        0 0 15px #ff3131,
+        0 0 30px #ff3131;
+}
+
+.logo-box p{
+    margin-top:15px;
+    font-size:22px;
+    color:#ffd54f;
+}
+
+main{
+    width:min(1000px,90%);
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.card h2{
+    color:#ffd54f;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+textarea{
+    width:100%;
+    min-height:220px;
+    resize:vertical;
+
+    background:#1b1b20;
+    color:white;
+
+    border:2px solid #ff3131;
+    border-radius:12px;
+
+    padding:18px;
+    font-size:16px;
+    line-height:1.7;
+}
+
+textarea:focus{
+    outline:none;
+    box-shadow:0 0 15px rgba(255,49,49,0.4);
+}
+
+.links{
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+
+    margin:10px;
+
+    padding:14px 28px;
+
+    background:#ff3131;
+    color:white;
+
+    text-decoration:none;
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ffd54f;
+    color:#111;
+    transform:translateY(-3px);
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#999;
+}
+
+@media(max-width:768px){
+
+    .logo-box h1{
+        font-size:46px;
+    }
+
+    .logo-box p{
+        font-size:18px;
+    }
+
+    textarea{
+        min-height:180px;
+    }
+
+}
